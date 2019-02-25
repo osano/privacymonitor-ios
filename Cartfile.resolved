@@ -1,0 +1,8 @@
+github "Alamofire/Alamofire" "4.8.1"
+github "Moya/Moya" "12.0.1"
+github "ReactiveCocoa/ReactiveSwift" "4.0.0"
+github "ReactiveX/RxSwift" "4.4.1"
+github "antitypical/Result" "4.1.0"
+github "emaloney/CleanroomLogger" "6.0.2"
+github "osano/privacymonitor-ios-core" "v0.0.5"
+github "stephencelis/SQLite.swift" "0.11.5"

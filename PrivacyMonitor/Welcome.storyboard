@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="irf-w5-i2h">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome Page View Controller-->
+        <scene sceneID="8Yo-S1-a6D">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AM6-oY-RQZ" customClass="WelcomePageViewController" customModule="PrivacyMonitor" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Dm-5i-wiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="-564"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="8eO-pU-VWm">
+            <objects>
+                <viewController id="irf-w5-i2h" customClass="WelcomeViewController" customModule="PrivacyMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BfT-B4-9qS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="NiL-ot-n5B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWO-TY-taR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="AM6-oY-RQZ" kind="embed" id="EUH-G4-t6R"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8HH-in-pDs">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.031372549019607843" green="0.70588235294117641" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.6705882352941176" green="0.93725490196078431" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rWO-TY-taR" firstAttribute="trailing" secondItem="BfT-B4-9qS" secondAttribute="trailing" id="4bt-0g-kCw"/>
+                            <constraint firstItem="NiL-ot-n5B" firstAttribute="trailing" secondItem="BfT-B4-9qS" secondAttribute="trailing" id="6zc-yD-mzW"/>
+                            <constraint firstItem="rn2-v7-dcQ" firstAttribute="bottom" secondItem="8HH-in-pDs" secondAttribute="bottom" constant="20" id="AzT-Ej-QdY"/>
+                            <constraint firstItem="rWO-TY-taR" firstAttribute="bottom" secondItem="BfT-B4-9qS" secondAttribute="bottom" id="DPP-au-zQr"/>
+                            <constraint firstItem="8HH-in-pDs" firstAttribute="centerX" secondItem="BfT-B4-9qS" secondAttribute="centerX" id="Ooy-n5-XrV"/>
+                            <constraint firstItem="NiL-ot-n5B" firstAttribute="leading" secondItem="BfT-B4-9qS" secondAttribute="leading" id="TpH-IO-qgM"/>
+                            <constraint firstItem="NiL-ot-n5B" firstAttribute="top" secondItem="BfT-B4-9qS" secondAttribute="top" id="bms-i8-aEH"/>
+                            <constraint firstItem="rWO-TY-taR" firstAttribute="leading" secondItem="BfT-B4-9qS" secondAttribute="leading" id="dYg-O2-fRE"/>
+                            <constraint firstItem="NiL-ot-n5B" firstAttribute="bottom" secondItem="BfT-B4-9qS" secondAttribute="bottom" id="lgy-k6-wqZ"/>
+                            <constraint firstItem="NiL-ot-n5B" firstAttribute="centerX" secondItem="BfT-B4-9qS" secondAttribute="centerX" id="mvQ-5X-kOt"/>
+                            <constraint firstItem="rWO-TY-taR" firstAttribute="top" secondItem="BfT-B4-9qS" secondAttribute="top" id="tSd-2P-CZ8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rn2-v7-dcQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="8HH-in-pDs" id="zqt-UT-j7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HW1-0b-f2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="-563.56821589205401"/>
+        </scene>
+        <!--Welcome Page Item View Controller-->
+        <scene sceneID="hcV-UJ-6C5">
+            <objects>
+                <viewController storyboardIdentifier="FirstPageViewController" id="NN6-pH-cH3" customClass="WelcomePageItemViewController" customModule="PrivacyMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AZX-RM-W0o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5G6-gz-kho">
+                                <rect key="frame" x="53" y="143" width="269" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Uy7-eR-hnf"/>
+                                    <constraint firstAttribute="width" constant="269" id="a4q-SG-Mdr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3B-VG-2Tk">
+                                <rect key="frame" x="75" y="271" width="225" height="48"/>
+                                <string key="text">We read the fine print
+so that you don't have to!</string>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw1-9k-jGc">
+                                <rect key="frame" x="40" y="349" width="295" height="67.5"/>
+                                <string key="text">Privacy Monitor by Osano is a free, open source, privacy rating app that lets you quickly understand which sites and apps should be trusted with your private data.</string>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNz-Yy-A7w" customClass="WelcomePageButton" customModule="PrivacyMonitor" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="541" width="200" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="JBO-0l-A97"/>
+                                    <constraint firstAttribute="width" constant="200" id="gBQ-8s-MYG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="actionButtonTapped:" destination="NN6-pH-cH3" eventType="touchUpInside" id="eR1-Zt-oSl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5G6-gz-kho" firstAttribute="centerX" secondItem="AZX-RM-W0o" secondAttribute="centerX" id="0Ek-Qp-UZ1"/>
+                            <constraint firstItem="R3B-VG-2Tk" firstAttribute="top" secondItem="5G6-gz-kho" secondAttribute="bottom" constant="80" id="SU8-Km-kIE"/>
+                            <constraint firstItem="Bw1-9k-jGc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AZX-RM-W0o" secondAttribute="leading" multiplier="0.8" constant="40" id="U9O-IP-gqw"/>
+                            <constraint firstItem="Bw1-9k-jGc" firstAttribute="top" secondItem="R3B-VG-2Tk" secondAttribute="bottom" constant="30" id="UqD-Be-ToS"/>
+                            <constraint firstItem="5G6-gz-kho" firstAttribute="centerY" secondItem="AZX-RM-W0o" secondAttribute="centerY" multiplier="0.5" id="Yz7-5z-NoS"/>
+                            <constraint firstItem="Bw1-9k-jGc" firstAttribute="centerX" secondItem="AZX-RM-W0o" secondAttribute="centerX" id="a4l-Gu-Cc5"/>
+                            <constraint firstItem="MNz-Yy-A7w" firstAttribute="centerX" secondItem="AZX-RM-W0o" secondAttribute="centerX" id="bLu-ga-rR5"/>
+                            <constraint firstItem="R3B-VG-2Tk" firstAttribute="centerX" secondItem="AZX-RM-W0o" secondAttribute="centerX" id="d1W-hy-DcV"/>
+                            <constraint firstItem="P0S-w3-MKG" firstAttribute="bottom" secondItem="MNz-Yy-A7w" secondAttribute="bottom" constant="80" id="gIU-Ah-ZdJ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bw1-9k-jGc" secondAttribute="trailing" multiplier="0.8" constant="40" id="hEb-Sm-l38"/>
+                            <constraint firstItem="Bw1-9k-jGc" firstAttribute="centerX" secondItem="AZX-RM-W0o" secondAttribute="centerX" id="ijz-au-Mif"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P0S-w3-MKG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SSn-z4-lI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.19999999999999" y="148.87556221889056"/>
+        </scene>
+        <!--Welcome Page Item View Controller-->
+        <scene sceneID="Zql-wL-MzT">
+            <objects>
+                <viewController storyboardIdentifier="SecondPageViewController" id="9u6-R8-fP1" customClass="WelcomePageItemViewController" customModule="PrivacyMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yyb-pg-xmB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Mq9-rC-aJc">
+                                <rect key="frame" x="26.5" y="207" width="322.5" height="48"/>
+                                <string key="text">Access the privacy ratings in the app
+using our private web browser.</string>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="xJN-Vi-6yh">
+                                <rect key="frame" x="37" y="408" width="301.5" height="48"/>
+                                <string key="text">Or quickly access ratings from the
+share sheet of your favorite apps!</string>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePage2Top" translatesAutoresizingMaskIntoConstraints="NO" id="G15-dV-ZMN">
+                                <rect key="frame" x="39.5" y="103" width="296" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="SGO-pB-sRu"/>
+                                    <constraint firstAttribute="height" constant="94" id="XoJ-6Q-Hg3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePage2Middle" translatesAutoresizingMaskIntoConstraints="NO" id="nLa-zB-QJJ">
+                                <rect key="frame" x="39.5" y="285" width="296" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="dpR-4j-Fe0"/>
+                                    <constraint firstAttribute="height" constant="119" id="tgi-nH-JJi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8J-dD-hBV" customClass="WelcomePageButton" customModule="PrivacyMonitor" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="541" width="200" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="RSi-dz-dwK"/>
+                                    <constraint firstAttribute="height" constant="46" id="wcP-Qi-8H4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="actionButtonTapped:" destination="9u6-R8-fP1" eventType="touchUpInside" id="xyi-Dg-ZGD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GwW-Za-tcm" firstAttribute="bottom" secondItem="d8J-dD-hBV" secondAttribute="bottom" constant="80" id="4hj-cn-aFZ"/>
+                            <constraint firstItem="Mq9-rC-aJc" firstAttribute="centerX" secondItem="yyb-pg-xmB" secondAttribute="centerX" id="8YZ-PP-YxX"/>
+                            <constraint firstItem="d8J-dD-hBV" firstAttribute="centerX" secondItem="yyb-pg-xmB" secondAttribute="centerX" id="AFN-zq-QPv"/>
+                            <constraint firstItem="xJN-Vi-6yh" firstAttribute="centerX" secondItem="yyb-pg-xmB" secondAttribute="centerX" id="R5f-OR-erV"/>
+                            <constraint firstItem="xJN-Vi-6yh" firstAttribute="top" secondItem="nLa-zB-QJJ" secondAttribute="bottom" constant="4" id="SR7-pV-YaW"/>
+                            <constraint firstItem="Mq9-rC-aJc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yyb-pg-xmB" secondAttribute="leading" constant="20" id="V5a-p6-YIl"/>
+                            <constraint firstItem="Mq9-rC-aJc" firstAttribute="top" secondItem="G15-dV-ZMN" secondAttribute="bottom" constant="10" id="ZXp-9Y-Wq4"/>
+                            <constraint firstItem="G15-dV-ZMN" firstAttribute="centerY" secondItem="yyb-pg-xmB" secondAttribute="centerY" multiplier="0.45" id="dQu-ia-URa"/>
+                            <constraint firstItem="nLa-zB-QJJ" firstAttribute="centerX" secondItem="yyb-pg-xmB" secondAttribute="centerX" id="dYi-kn-ur4"/>
+                            <constraint firstItem="xJN-Vi-6yh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yyb-pg-xmB" secondAttribute="leading" constant="24" id="k5P-3A-old"/>
+                            <constraint firstItem="nLa-zB-QJJ" firstAttribute="top" secondItem="Mq9-rC-aJc" secondAttribute="bottom" constant="30" id="kmm-lR-gsM"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xJN-Vi-6yh" secondAttribute="trailing" constant="24" id="m74-4K-srl"/>
+                            <constraint firstItem="G15-dV-ZMN" firstAttribute="centerX" secondItem="yyb-pg-xmB" secondAttribute="centerX" id="wdf-bI-WdE"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mq9-rC-aJc" secondAttribute="trailing" constant="20" id="yU4-wX-bE6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GwW-Za-tcm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8j-Fe-nT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="149"/>
+        </scene>
+        <!--Welcome Page Item View Controller-->
+        <scene sceneID="yLO-CG-s5p">
+            <objects>
+                <viewController storyboardIdentifier="ThirdPageViewController" id="qmf-Ao-CHf" customClass="WelcomePageItemViewController" customModule="PrivacyMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2f-fn-9eQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePage3Top" translatesAutoresizingMaskIntoConstraints="NO" id="6aG-Fx-C9Y">
+                                <rect key="frame" x="39.5" y="90.5" width="296" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="H2O-kJ-M76"/>
+                                    <constraint firstAttribute="height" constant="119" id="Nrc-aa-FWM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="ruZ-jN-M12">
+                                <rect key="frame" x="22.5" y="221.5" width="330.5" height="120"/>
+                                <string key="text">If you don't see the share sheet
+when you click the share button from
+your favorite apps, look for the
+"more" button to open the
+Activities options screen.</string>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="wel-yF-vcg">
+                                <rect key="frame" x="40" y="365.5" width="295" height="84"/>
+                                <string key="text">Next, make sure that Privacy Monitor is enabled, and drag "Privacy Monitor" to the top of the list.
+
+Now you're ready to take charge of your own privacy online!</string>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0G-hv-ey3" customClass="WelcomePageButton" customModule="PrivacyMonitor" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="541" width="200" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="2C9-BK-UVN"/>
+                                    <constraint firstAttribute="width" constant="200" id="XyZ-a8-Ii3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                <state key="normal" title="GOT IT!"/>
+                                <connections>
+                                    <action selector="actionButtonTapped:" destination="qmf-Ao-CHf" eventType="touchUpInside" id="Wj8-jS-jxJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wel-yF-vcg" firstAttribute="centerX" secondItem="K2f-fn-9eQ" secondAttribute="centerX" id="1w1-Qx-bwL"/>
+                            <constraint firstItem="6aG-Fx-C9Y" firstAttribute="centerY" secondItem="K2f-fn-9eQ" secondAttribute="centerY" multiplier="0.45" id="2uz-UM-L8m"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wel-yF-vcg" secondAttribute="trailing" constant="40" id="4m5-N5-lYa"/>
+                            <constraint firstItem="wel-yF-vcg" firstAttribute="top" secondItem="ruZ-jN-M12" secondAttribute="bottom" constant="24" id="8Rh-05-cXL"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ruZ-jN-M12" secondAttribute="trailing" constant="20" id="97V-Lv-vHg"/>
+                            <constraint firstItem="hJL-iG-PZJ" firstAttribute="bottom" secondItem="y0G-hv-ey3" secondAttribute="bottom" constant="80" id="Ay4-0c-79C"/>
+                            <constraint firstItem="ruZ-jN-M12" firstAttribute="top" secondItem="6aG-Fx-C9Y" secondAttribute="bottom" constant="12" id="hps-CV-91f"/>
+                            <constraint firstItem="wel-yF-vcg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K2f-fn-9eQ" secondAttribute="leading" constant="40" id="qPF-00-Unz"/>
+                            <constraint firstItem="ruZ-jN-M12" firstAttribute="centerX" secondItem="K2f-fn-9eQ" secondAttribute="centerX" id="qS7-wU-5u6"/>
+                            <constraint firstItem="y0G-hv-ey3" firstAttribute="centerX" secondItem="K2f-fn-9eQ" secondAttribute="centerX" id="s7b-Ju-Kkx"/>
+                            <constraint firstItem="6aG-Fx-C9Y" firstAttribute="centerX" secondItem="K2f-fn-9eQ" secondAttribute="centerX" id="sYY-fK-4Jm"/>
+                            <constraint firstItem="ruZ-jN-M12" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K2f-fn-9eQ" secondAttribute="leading" constant="20" id="u41-4T-NTq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hJL-iG-PZJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIH-OD-ygQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SplashBackground" width="375" height="667"/>
+        <image name="SplashLogo" width="269" height="48"/>
+        <image name="WelcomePage2Middle" width="296" height="119"/>
+        <image name="WelcomePage2Top" width="296" height="94"/>
+        <image name="WelcomePage3Top" width="296" height="119"/>
+    </resources>
+</document>
